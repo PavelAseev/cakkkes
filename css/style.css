@@ -1,0 +1,505 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+/* Background Colors */
+/* Text Colors */
+/* line 20, sass/input.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 25, sass/input.scss */
+a,
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* line 33, sass/input.scss */
+html {
+  width: 100%;
+}
+
+/* line 37, sass/input.scss */
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto Slab", serif;
+  color: white;
+}
+
+/* line 43, sass/input.scss */
+body ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 48, sass/input.scss */
+body .fas {
+  display: inline-block;
+}
+
+/* line 53, sass/input.scss */
+.header {
+  min-height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* line 59, sass/input.scss */
+.header .row > * {
+  padding: 0;
+}
+
+/* line 63, sass/input.scss */
+.header__logo {
+  padding-top: 4px;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 900;
+  font-family: "Pacifico", cursive;
+}
+
+/* line 70, sass/input.scss */
+.header__logo a {
+  display: block;
+  padding: 2px 0;
+  position: relative;
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* line 78, sass/input.scss */
+.header__logo a:hover {
+  color: #F8D210;
+}
+
+/* line 84, sass/input.scss */
+.header__logo a:hover span {
+  color: #000;
+}
+
+/* line 88, sass/input.scss */
+.header__logo span {
+  color: #ff6e6e;
+}
+
+/* line 95, sass/input.scss */
+.header__dropdown .content {
+  display: none;
+  position: absolute;
+  background-color: #444444;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* line 104, sass/input.scss */
+.header__dropdown:hover .content {
+  display: block;
+}
+
+/* line 108, sass/input.scss */
+.header__dropdown a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* line 115, sass/input.scss */
+.header__dropdown li {
+  padding: 5px 10px;
+}
+
+/* line 120, sass/input.scss */
+.header__menu {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* line 126, sass/input.scss */
+.header__menu ul {
+  padding-top: 8px;
+  margin: 0 auto;
+}
+
+/* line 130, sass/input.scss */
+.header__menu ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 4rem;
+  color: #aaaaaa;
+}
+
+/* line 136, sass/input.scss */
+.header__menu ul li.selected {
+  color: #000 !important;
+}
+
+/* line 140, sass/input.scss */
+.header__menu ul li a {
+  display: block;
+  padding: 2px 0;
+  position: relative;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* line 147, sass/input.scss */
+.header__menu ul li a:hover {
+  color: #000;
+}
+
+/* line 150, sass/input.scss */
+.header__menu ul li a:hover:after {
+  transform: scale(1);
+}
+
+/* line 155, sass/input.scss */
+.header__menu ul li a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: #000;
+  transform: scale(0);
+  transition: all 0.25s ease;
+}
+
+/* line 168, sass/input.scss */
+.header__menu ul li:last-child {
+  margin-right: 0;
+}
+
+/* line 175, sass/input.scss */
+.header__right {
+  text-align: right;
+  margin-right: 1.5rem;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* line 183, sass/input.scss */
+.header__right ul {
+  padding-top: 2px;
+}
+
+/* line 186, sass/input.scss */
+.header__right ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 15px;
+  height: 100%;
+}
+
+/* line 194, sass/input.scss */
+.header__right .hover {
+  border-bottom: 1px solid #F8D210 !important;
+  color: #F8D210;
+}
+
+/* line 199, sass/input.scss */
+.header__right .search-field {
+  border-bottom: 1px solid #aaaaaa;
+  position: relative;
+  width: 100%;
+}
+
+/* line 207, sass/input.scss */
+.header__right .search-field input {
+  caret-color: #F8D210;
+  padding-right: 10px;
+  background: inherit;
+  color: inherit;
+}
+
+/* line 213, sass/input.scss */
+.header__right .search-field input::placeholder {
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+/* line 218, sass/input.scss */
+.header__right .search-field input:focus {
+  outline: none;
+}
+
+/* line 221, sass/input.scss */
+.header__right .search-field input:focus::placeholder {
+  color: transparent;
+}
+
+/* line 227, sass/input.scss */
+.header__right .search-field .btn-search {
+  position: absolute;
+  right: 5px;
+  cursor: pointer;
+}
+
+/* line 232, sass/input.scss */
+.header__right .search-field .btn-search:hover {
+  color: #F8D210;
+}
+
+/* line 237, sass/input.scss */
+.header__right .search-field #search {
+  border: none;
+}
+
+/* line 241, sass/input.scss */
+.header__right .search-field a {
+  color: inherit;
+}
+
+/* line 246, sass/input.scss */
+.header__right .btn-circle {
+  color: white;
+  background: #444444;
+  width: 100%;
+  text-transform: uppercase;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.5s;
+}
+
+/* line 255, sass/input.scss */
+.header__right .btn-circle:hover {
+  color: #444444;
+  background: white;
+}
+
+/* line 261, sass/input.scss */
+.header__right .btn-round {
+  text-align: left;
+  color: white;
+  background: #19ce96;
+  text-transform: uppercase;
+  border-radius: 50px;
+  width: 140px;
+  position: relative;
+  padding-left: 30px;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+}
+
+/* line 274, sass/input.scss */
+.header__right .btn-round .fa-shopping-cart {
+  margin-right: 5px;
+}
+
+/* line 278, sass/input.scss */
+.header__right .btn-round .circle {
+  margin-left: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  background: #000;
+  color: white;
+  display: inline-block;
+  line-height: 1.25rem;
+  text-align: center;
+}
+
+/* line 291, sass/input.scss */
+.header__right .btn-round:hover {
+  color: #19ce96;
+  background: white;
+}
+
+/* line 299, sass/input.scss */
+.hero {
+  background: url("../img/bgbig.jpg") no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 650px;
+}
+
+/* line 307, sass/input.scss */
+.hero__content {
+  width: 800px;
+  display: flex;
+  /* establish flex container */
+  flex-direction: column;
+  /* make main axis vertical */
+  align-items: flex-start;
+  /* center items horizontally, in this case */
+  height: 600px;
+  margin-left: auto;
+  margin-top: 5rem;
+}
+
+/* line 316, sass/input.scss */
+.hero__primary {
+  padding: 0 2rem;
+}
+
+/* line 318, sass/input.scss */
+.hero__primary h1 {
+  color: #171717;
+}
+
+/* line 322, sass/input.scss */
+.hero__secondary {
+  text-align: left;
+  color: #787878;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 0 2rem;
+}
+
+/* line 329, sass/input.scss */
+.hero__button {
+  padding: 2rem;
+  margin: 0;
+}
+
+/* line 332, sass/input.scss */
+.hero__button .btn {
+  width: 200px;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+/* line 339, sass/input.scss */
+.products {
+  padding: 4rem 0;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+/* line 343, sass/input.scss */
+.products__single {
+  padding: 2rem 0;
+  background: #fefefe;
+  border: 1px solid #f9f9f9;
+  border-radius: 20px;
+  color: #171717;
+  margin-bottom: 2rem;
+}
+
+/* line 351, sass/input.scss */
+.products__image {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* line 354, sass/input.scss */
+.products__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* line 360, sass/input.scss */
+.products__title {
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+/* line 364, sass/input.scss */
+.products__description {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: #171717;
+  font-weight: 300;
+}
+
+/* line 370, sass/input.scss */
+.products__order {
+  margin-top: 0.5rem;
+}
+
+/* line 372, sass/input.scss */
+.products__order .btn {
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 10px 25px;
+}
+
+/* line 379, sass/input.scss */
+.map {
+  width: 100%;
+  height: 600px;
+  padding: 4rem;
+  color: #171717;
+}
+
+/* line 384, sass/input.scss */
+.map img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* line 390, sass/input.scss */
+.map p {
+  color: #aaaaaa;
+}
+
+/* line 394, sass/input.scss */
+.contact {
+  background: #f9f9f9;
+  width: 100%;
+  height: 600px;
+  padding: 4rem;
+  color: #171717;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+/* line 403, sass/input.scss */
+.contact h3 {
+  text-align: center;
+  padding-bottom: 1rem;
+  margin: 0 auto;
+}
+
+/* line 409, sass/input.scss */
+.contact img {
+  display: block;
+  width: 300px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* line 415, sass/input.scss */
+.contact .form-group {
+  margin-bottom: 1rem;
+}
+
+/* line 418, sass/input.scss */
+.contact input, .contact textarea {
+  border-radius: 0.25rem;
+  padding: 1rem;
+}
+
+/* line 423, sass/input.scss */
+footer {
+  padding: 4rem 0;
+  text-align: center;
+  background: #d9d9d9;
+  color: #171717;
+}
+
+/*# sourceMappingURL=input.css.map */
+
+/*# sourceMappingURL=style.css.map */
